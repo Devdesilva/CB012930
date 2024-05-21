@@ -20,7 +20,7 @@ h1 {
   font-size: larger;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
@@ -31,11 +31,7 @@ h1 {
   background-color: transparent;
 }
 
-@media only screen and (max-width: 595px) {
-  .imagetxtcenter {
-    font-size: small;
-}
-}
+
 .textmargin {
   margin-top: -50px;
 }
@@ -110,6 +106,7 @@ hr {
   margin: 50px auto; 
 }
 
+/*img was zoomed out due to being too small*/
 .zoom-out {
   transform: scale(1.3);
   position: absolute;
@@ -201,25 +198,8 @@ hr {
   object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-    top: 1rem;
-  }
 
-  .image-collage {
-    height: 30vh;
-    padding: 0.5rem;
-    border-radius: 1rem;
-  }  
-}
-
-@media screen and (max-width: 960px) {
-  .text {
-    font-size: 0.92rem;
-  }
-}
-
+/*About us page*/
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -251,20 +231,6 @@ hr {
   height: auto;
 }
 
-@media (max-width: 1111px) {
-  .grid-container {
-    grid-template-columns: repeat(2, auto);
-  }
-  .location img {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 630px) {
-  .grid-container {
-    grid-template-columns: repeat(1, auto);
-  }
-}
 
 .service-table {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -287,7 +253,10 @@ hr {
   background-color: #f2f2f2;
 }
 
-.pclass {
+/*dairy products*/
+
+
+.pclass {         /*Dairy products paragraph*/
   padding: 0px 50px;
   text-align: center;
   font-size: 20px;
@@ -321,21 +290,13 @@ hr {
   object-fit: cover;
 }
 
-table {
-  width: 100%;
-  border-spacing: 15px;
-}
-
-table, th, td {
-  border: none;
-  border-radius: 10px;
-}
-
+/* cosmetic products*/
 th, td {
   padding-top: 10px;
   text-align: center;
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
+
 
 .product {
   padding-top: 10px;
@@ -343,20 +304,9 @@ th, td {
   height: 150px;
 }
   
-@media only screen and (max-width: 600px) {  
-  tr {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  td {
-    flex: 50%;    
-    margin-bottom: 20px;
-  }
-}
 
-.product-grid {
+/* vegetables*/
+.vegproduct-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -376,18 +326,7 @@ th, td {
   height: 125px;
 }
 
-@media (max-width: 780px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 520px) {
-    .product-grid {
-      grid-template-columns: repeat(1, 1fr);
-    }
-}
-
+/*Sources for vegetables*/
 .veggrid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -409,21 +348,46 @@ th, td {
   text-align: center;
 }
 
-@media (max-width: 1111px) {
-  .veggrid-container {
-    grid-template-columns: repeat(2, auto);
-  }
-  .veglocation img {
-    max-width: 100%;
-  }
+/*order form*/
+.orderForm {
+  margin-left: 30px;
+  margin-right: 50px;
 }
 
-@media (max-width: 630px) {
-  .veggrid-container {
-    grid-template-columns: repeat(1, auto);
-  }
+.orderForm h2 {
+  text-align: center;
 }
 
+.orderForm label {
+  display: block;
+  margin-top: 20px;
+}
+
+textarea, .orderForm input[type="text"], .orderForm input[type="month"], .orderForm input[type="email"], .orderForm input[type="tel"] {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.orderForm input[type="submit"] {
+  border-radius: 5px;
+  font-size: large;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.orderForm input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+/*register page*/
 .pclass1 {
   padding: 0px 50px;
   text-align: center;
@@ -492,39 +456,113 @@ th, td {
   background-color: #45a049;
 }
 
-.orderForm {
-  margin-left: 30px;
-  margin-right: 50px;
+/*responsive*/
+
+@media only screen and (max-width: 580px) {
+  .imagetxtcenter {
+    font-size: medium;
+  }
 }
 
-.orderForm h2 {
-  text-align: center;
+@media only screen and (max-width: 490px) {
+  .imagetxtcenter {
+    font-size: smaller;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .imagetxtcenter {
+    font-size: small;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .imagetxtcenter {
+    font-size: x-small;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .imagetxtcenter {
+    font-size: 8px;
+  
+  }
 }
 
-.orderForm label {
-  display: block;
-  margin-top: 20px;
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+    top: 1rem;
+  }
+
+  @media screen and (max-width: 440px) {
+    h1 {
+      font-size: 1.1rem;
+      top: 1rem;
+    }
+  }
+  .image-collage {
+    height: 30vh;
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }  
 }
 
-textarea, .orderForm input[type="text"], .orderForm input[type="month"], .orderForm input[type="email"], .orderForm input[type="tel"] {
-  background-color: white;
-  border: none;
-  border-radius: 5px;
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
+@media screen and (max-width: 960px) {
+  .text {
+    font-size: 0.92rem;
+  }
 }
 
-.orderForm input[type="submit"] {
-  border-radius: 5px;
-  font-size: large;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
+@media (max-width: 1111px) {
+  .grid-container {
+    grid-template-columns: repeat(2, auto);
+  }
+  .location img {
+    max-width: 100%;
+  }
 }
 
-.orderForm input[type="submit"]:hover {
-  background-color: #45a049;
+@media (max-width: 630px) {
+  .grid-container {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+@media only screen and (max-width: 600px) {  
+  #trcosmetics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #tdcosmetics {
+    flex: 50%;    
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 780px) {
+  .vegproduct-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+    .vegproduct-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 1111px) {
+  .veggrid-container {
+    grid-template-columns: repeat(2, auto);
+  }
+  .veglocation img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 630px) {
+  .veggrid-container {
+    grid-template-columns: repeat(1, auto);
+  }
 }
